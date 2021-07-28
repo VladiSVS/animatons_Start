@@ -1,0 +1,225 @@
+div {
+    height: 200px;
+    width: 200px;
+    background-color: lightgreen;
+    border-radius: 50%;
+}
+
+div:nth-of-type(1) {
+    animation-name: changeColor;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    /* https://www.w3schools.com/css/css3_animations.asp */
+    animation-fill-mode: forwards;
+    /* https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_fill-mode */
+}
+
+/* Variante 1 */
+
+/* @keyframes changeColor {
+    from {background-color: orange;}
+    to {background-color:lightgreen;}
+} */
+
+@keyframes changeColor {
+    0% {
+        background-color: orange;
+    }
+    25% {
+        background-color: violet;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: lightgreen;
+    }
+}
+
+div:nth-of-type(2) {
+    /* animation-name: colorMove;
+animation-duration: 2s;
+animation-timing-function: linear;
+animation-delay: 2s;
+animation-iteration-count:infinite;
+animation-direction:reverse;
+animation-fill-mode: forwards; */
+    animation: colorMove 2s linear 2s infinite reverse forwards;
+}
+
+@keyframes colorMove {
+    0%, 100% {
+        background-color: orange;
+        transform: translateX(50px)
+    }
+    25% {
+        background-color: violet;
+        transform: translateX(100px)
+    }
+    50% {
+        background-color: blue;
+        transform: translateX(150px)
+    }
+    /* 100% {background-color:lightgreen;transform: translateX(200px)} */
+}
+
+h2 {
+    display: inline-block;
+    padding: 5px;
+    background-color: lightblue;
+    /* animation-name: jumpUp;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-fill-mode: linear;*/
+    animation: jumpUp 2s ease-in infinite;
+}
+
+@keyframes jumpUp {
+    0%, 100% {
+        transform: translateY(20px)
+    }
+    25% {
+        transform: translateY(10px) scale(1.5);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translateY(5px)
+    }
+}
+
+img {
+    width: 200px;
+    animation: moveTrain 8s linear infinite;
+}
+
+@keyframes moveTrain {
+    0%, 100% {
+        transform: translateX(0px) rotateY(180deg);
+    }
+    1% {
+        transform: translateX(0px)
+    }
+    50% {
+        transform: translateX(300px);
+    }
+    52% {
+        transform: translateX(300px) rotateY(180deg)
+    }
+    99% {
+        transform: translateX(0px) rotateY(180deg)
+    }
+}
+
+@keyframes tschuTschuTrain {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(40vw) scale(.2);
+    }
+    45% {
+        transform: translateX(80vw);
+    }
+    50% {
+        transform: translateX(80vw) rotateY(180deg);
+    }
+    55% {
+        transform: translateX(80vw) rotateY(180deg);
+    }
+    75% {
+        transform: translateX(40vw) rotateY(180deg) scale(1.8);
+    }
+    95% {
+        transform: translateX(0) rotateY(180deg);
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+/* Andreas
+img {
+    width: 20%;
+    animation: tschuTschuTrain 5s linear 1s infinite;
+} */
+
+/* @keyframes trainMove {
+    0%, 100% {
+        transform: translateX(0px) rotateY(180deg);
+    }
+    1% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(300px);
+    }
+    52% {
+        transform: translateX(600px) rotateY(180deg);
+    }
+    99% {
+        transform: translateX(0px) rotateY(180deg);
+    }
+} */
+
+/* Simon 
+img {
+    width: 200px;
+    animation: trainMove;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}*/
+
+/* @keyframes trainMove {
+    0%, 100% {
+        transform: translateX(0px) rotateY(180deg);
+    }
+    1% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(300px);
+    }
+    52% {
+        transform: translateX(600px) rotateY(180deg);
+    }
+    99% {
+        transform: translateX(0px) rotateY(180deg);
+    }
+} */
+
+/* Klaus */
+
+/* @keyframes moveTrain {
+    0% {
+        left: 0vw;
+    }
+    50% {
+        left: calc(100vw - 200px);
+    }
+} */
+
+/* Hisham */
+
+/* @keyframes move {
+    0%, 100% {
+        transform: translateX(20vw)
+    }
+    25% {
+        transform: translateX(40vw)
+    }
+    50% {
+        transform: translateX(70vw)
+    }
+    75% {
+        transform: translateX(85vw)
+    }
+    100% {
+        transform: translateX(98vw) rotateY(180deg);
+    }
+} */
